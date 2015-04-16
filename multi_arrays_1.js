@@ -18,7 +18,8 @@ console.log (masterArray);
 var multiArray = function(array) {
 	for (var i = 0; i < array.length; i++) {
 		for (var j = 0; j < array[i].length; j++) {
-			array[i][j] = (array[i][j] + 1) / 2;
+			array[i][j] = plusOne(array[i][j]);
+			array[i][j] = timesTwo(array[i][j]);
 		}
 		console.log(array[i]);
 	}
@@ -27,4 +28,12 @@ var multiArray = function(array) {
 
 multiArray(masterArray);
 
+function plusOne(val) {
+	val +=1;
+	return val;
+}
+function timesTwo(val) {
+	val = val * 2;
+	return val;
+}
 
